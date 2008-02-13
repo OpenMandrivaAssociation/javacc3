@@ -33,21 +33,21 @@
 
 Name:           javacc3
 Version:        3.2
-Release:        2jpp
+Release:        %mkrel 2
 Epoch:          0
 Summary:        A parser/scanner generator for java
 License:        BSD
-Vendor:         JPackage Project
-Distribution:   JPackage
 Source0:	javacc-3.2-src.tar.gz
 Source1:	javacc
 Source2:	jjdoc
 Source3:	jjtree
+Patch0:		javacc3-source_1.4.patch
 URL:            https://javacc.dev.java.net/
-Group:          Development/Code Generators
+Group:          Development/Java
 BuildRoot:      %{_tmppath}/%{_basename}-%{version}-%{release}-buildroot
 BuildArch:      noarch
 Requires:	jpackage-utils >= 0:1.5
+BuildRequires:	java-devel java-rpmbuild
 BuildRequires:	ant, /bin/bash
 
 %description 
@@ -60,20 +60,21 @@ a tool called JJTree included with JavaCC), actions, debugging, etc.
 
 %package manual
 Summary:        Manual for %{_basename}
-Group:          Development/Documentation
+Group:          Development/Java
 
 %description manual
 Manual for %{_basename}.
 
 %package demo
 Summary:        Examples for %{_basename}
-Group:          Development/Documentation
+Group:          Development/Java
 
 %description demo
 Examples for %{_basename}.
 
 %prep
 %setup -q -n %{_basename}-%{version}
+%patch0 -p1
 cp %{SOURCE1} javacc
 cp %{SOURCE2} jjdoc
 cp %{SOURCE3} jjtree
