@@ -33,7 +33,7 @@
 
 Name:           javacc3
 Version:        3.2
-Release:        %mkrel 4
+Release:        %mkrel 4.1
 Epoch:          0
 Summary:        A parser/scanner generator for java
 License:        BSD
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_javadir}/*.jar
 %doc LICENSE README
 %defattr(0755,root,root,0755)
-/usr/bin/*
+%{_bindir}/*
 
 %files manual
 %defattr(0644,root,root,0755)
@@ -111,5 +111,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files demo
 %defattr(0644,root,root,0755)
-/usr/share/%{name}/*
+%{_datadir}/%{name}
 
