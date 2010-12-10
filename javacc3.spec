@@ -33,7 +33,7 @@
 
 Name:           javacc3
 Version:        3.2
-Release:        %mkrel 4.2
+Release:        %mkrel 4.3
 Epoch:          0
 Summary:        A parser/scanner generator for java
 License:        BSD
