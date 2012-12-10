@@ -113,3 +113,42 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0644,root,root,0755)
 %{_datadir}/%{name}
 
+
+
+%changelog
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 0:3.2-4.3mdv2011.0
++ Revision: 619782
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 0:3.2-4.2mdv2010.0
++ Revision: 438016
+- rebuild
+
+* Mon Jan 12 2009 David Walluck <walluck@mandriva.org> 0:3.2-4.1mdv2009.1
++ Revision: 328766
+- fix Release
+- fix some macro usage
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0:3.2-4mdv2009.0
++ Revision: 247391
+- rebuild
+
+* Wed Feb 13 2008 Nicolas Vigier <nvigier@mandriva.com> 0:3.2-2mdv2008.1
++ Revision: 167044
+- fix groups, release and buildrequires
+- build with -source 1.4
+- import javacc3
+
+
+* Mon Apr 24 2006 Fernando Nasser <fnasser@redhat.com> 0:3.2-2jpp
+- Rename to javacc3 as compatibility package
+- First JPP 1.7 build
+
+* Mon Nov 22 2004 Fernando Nasser <fnasser@redhat.com> 0:3.2-1jpp_2rh
+- Rebuild
+
+* Thu Mar  4 2004 Frank Ch. Eigler <fche@redhat.com> 0:3.2-1jpp_1rh
+- RH vacuuming
+
+* Fri Jan 30 2004 Sebastiano Vigna <vigna@acm.org> 0:3.2-1jpp
+- First JPackage version
